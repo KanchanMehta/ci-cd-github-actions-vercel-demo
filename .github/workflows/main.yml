@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: vercel-main   # <--- add this line
+        working-directory: vercel-main  
 
     steps:
       - uses: actions/checkout@v3
