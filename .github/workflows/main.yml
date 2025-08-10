@@ -6,10 +6,13 @@ on:
   pull_request:
     branches: [master]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: vercel-main   # <--- add this line
 
     steps:
       - uses: actions/checkout@v3
