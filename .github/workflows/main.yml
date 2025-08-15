@@ -12,6 +12,8 @@ jobs:
     defaults:
       run:
         working-directory: vercel-main
+    env:
+      HUSKY: 0
 
     steps:
       - uses: actions/checkout@v3
@@ -22,4 +24,3 @@ jobs:
       - run: npm install --legacy-peer-deps
       - run: npm run build
       - run: npm test
-
