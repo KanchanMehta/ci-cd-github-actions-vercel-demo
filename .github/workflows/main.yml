@@ -1,5 +1,3 @@
-# testing ci fix
-
 name: CI
 
 on:
@@ -11,11 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
- 
-defaults:
-  run:
-    working-directory: vercel-main
-
+    defaults:
+      run:
+        working-directory: vercel-main
 
     steps:
       - uses: actions/checkout@v3
@@ -26,3 +22,4 @@ defaults:
       - run: npm install
       - run: npm run build
       - run: npm test
+
